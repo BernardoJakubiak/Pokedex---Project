@@ -11,20 +11,25 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <li>Ditto<span id="nome"></span></li>
+                Informações sobre Ditto
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
             <div class="accordion-body">
-                <li>Nome: <span id="nome"></span></li>
-                <li>ID: <span id="id"></span></li>
-                <li>Altura: <span id="altura"></span></li>
-                <li>Peso: <span id="peso"></span></li>
+                <ul>
+                    <li>Nome: <span id="nome"></span></li>
+                    <li>ID: <span id="id"></span></li>
+                    <li>Altura: <span id="altura"></span></li>
+                    <li>Peso: <span id="peso"></span></li>
+                </ul>
             </div>
           </div>
         </div>
       </div>
-    <h1>Informações sobre Ditto</h1>
+
+    <!-- Inclua os arquivos JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-EKb0L2OJN5YrK5l/K6HIq5yfub9BsA7P/D/u5z5eRsE0k5KjcSHbS1T7xXv2Ks0p1" crossorigin="anonymous"></script>
 
     <script>
         // URL da API para o Pokémon Ditto
@@ -35,7 +40,6 @@
             try {
                 const response = await fetch(apiUrl);
                 const data = await response.json();
-
                 // Atualize os elementos HTML com os dados obtidos
                 document.getElementById('nome').textContent = data.name;
                 document.getElementById('id').textContent = data.id;
