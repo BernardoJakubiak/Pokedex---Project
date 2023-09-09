@@ -7,33 +7,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
-    <div class="accordion" id="accordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Informações sobre Ditto
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordion">
-            <div class="accordion-body">
-                <ul>
-                    <li>Nome: <span id="nome"></span></li>
-                    <li>ID: <span id="id"></span></li>
-                    <li>Altura: <span id="altura"></span></li>
-                    <li>Peso: <span id="peso"></span></li>
-                </ul>
+
+    <div class="container">
+        <div class="menu">
+            <div class="card" style="width: 18rem; display: inline-block;">
+            <img src="pokemon.jpeg" class="card-img-top" alt="pokemom_menu">
+            <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                    <h5 class="card-title">Escolha seu pokemon</h5>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Elétrico
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Fogo
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Água
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+              <a href="#" class="btn btn-primary">Selecionar</a>
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
     <!-- Inclua os arquivos JavaScript do Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-EKb0L2OJN5YrK5l/K6HIq5yfub9BsA7P/D/u5z5eRsE0k5KjcSHbS1T7xXv2Ks0p1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-EKb0L2OJN5YrK5l/K6HIq5yfub9BsA7P/D/u5z5eRsE0k5KjcSHbS1T7xXv2Ks0p1" crossorigin="anonymous">
 
-    <script>
+    
         // URL da API para o Pokémon Ditto
-        const apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto';
+        const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
         // Função para fazer a solicitação à API e atualizar a página
         async function fetchPokemonData() {
