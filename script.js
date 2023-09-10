@@ -7,7 +7,6 @@ async function fetchPokemonData(apiUrl) {
         document.getElementById('id').textContent = data.id;
         document.getElementById('height').textContent = data.height * 10;
         document.getElementById('weight').textContent = data.weight / 10;
-        // Adicione outros campos conforme necessário
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
     }
