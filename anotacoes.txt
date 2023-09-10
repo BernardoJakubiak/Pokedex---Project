@@ -1,12 +1,4 @@
-<div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" id="name"></h5>
-          <p class="card-text">
-            <p id="id">ID: </p>
-            <p id="height">Altura: </p>
-            <p id="weight">Peso: </p>
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+                    <p style="align-content: flex-end;">Nome: <span class="card-title" id="name"></span></p>
+                    <p style="align-content: flex-end;">ID: <span id="id"></span></p>
+                    <p style="align-content: flex-end;">ALTURA(cm): <span id="height"></span></p>
+                    <p style="align-content: flex-end;">PESO(kg): <span id="weight"></span></p>

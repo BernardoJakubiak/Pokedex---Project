@@ -6,11 +6,17 @@
     <title>Pokédex</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <body>
+    <style>
+        body {
+          background-image: url('background_img.jpg');
+        }
+    </style> 
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
     <div class="container">
         <div class="container text-center">
   <div class="row">
@@ -40,10 +46,10 @@
                             <div class="accordion-body">
                                 <p>Tipo Normal</p>
                                 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                                    <button id="lechonk" type="button" class="btn btn-primary" onclick="getPokemonByName('lechonk')">Lechonk</button>
-                                    <button type="button" class="btn btn-primary">Cyclizar</button>
-                                    <button type="button" class="btn btn-primary">Pidgey</button>
-                                    <button type="button" class="btn btn-primary">Farfetch'd</button>
+                                    <button type="button" class="btn btn-primary" onclick="getPokemonByName('lechonk')">Lechonk</button>
+                                    <button type="button" class="btn btn-primary" onclick="getPokemonByName('cyclizar')">Cyclizar</button>
+                                    <button type="button" class="btn btn-primary" onclick="getPokemonByName('pidgey')">Pidgey</button>
+                                    <button type="button" class="btn btn-primary" onclick="getPokemonByName('farfetchd')">Farfetch'd</button>
                                 </div>
                             </div>
                         </div>
@@ -261,24 +267,47 @@
       </nav>
   </div>
   <div class="row">
-    <div class="col-sm">Operações</div>
+    <div class="col-sm" id="operacoes" style="padding-top: 10%;">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="compareStats()">Comparar Status</button>
+            <button type="button" class="btn btn-primary" onclick="fight()">Lutar</button>
+        </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-sm" style="padding-top: 18%;">
-      <div class="card" style="width: 18rem;">
-        <img src="pokemon.jpeg" class="card-img-top" alt="...">
+  <div class="row" style="padding-left: 6%;">
+    <div class="col-sm" style="padding-top: 5%;">
+      <div class="card" style="width: 18rem;" id="cartaPokemon1">
+        <img src="pokemon.jpeg" class="card-img-top" alt="..." id="imgPokemon1">
         <div class="card-body"> 
           <p class="card-text">
-            <p style="align-content: flex-start;">Nome: <span class="card-title" id="name"></span></p>
-            <p style="align-content: flex-start;">ID: <span id="id"></span></p>
-            <p style="align-content: flex-start;">ALTURA(cm): <span id="height"></span></p>
-            <p style="align-content: flex-start;">PESO(kg): <span id="weight"></span></p>
+            <p style="align-content: flex-start;">Nome: <span class="card-title" id="namePokemon1"></span></p>
+            <p style="align-content: flex-start;">ID: <span id="idPokemon1"></span></p>
+            <p style="align-content: flex-start;">ALTURA(cm): <span id="heightPokemon1"></span></p>
+            <p style="align-content: flex-start;">PESO(kg): <span id="weightPokemon1"></span></p>
           </p>
         </div>
       </div>
     </div>
-    <div class="col-sm">Resultado</div>
-    <div class="col-sm">Card2</div>
+    <div class="col-sm" style="padding-top: 5%;">        
+        <div class="card" style="width: 18rem;" id="cartaPokemonResultado">
+            <img src="pokemon.jpeg" class="card-img-top" alt="...">
+            <div class="card-body"> 
+                <p class="card-text" id="result"></p>
+            </div>
+        </div></div>
+    <div class="col-sm" style="padding-top: 5%;">
+        <div class="card" style="width: 18rem;" id="cartaPokemon2">
+            <img src="pokemon.jpeg" class="card-img-top" alt="..." id="imgPokemon2">
+            <div class="card-body"> 
+                <p class="card-text">
+                    <p style="align-content: flex-end;">Nome: <span class="card-title" id="namePokemon2"></span></p>
+                    <p style="align-content: flex-end;">ID: <span id="idPokemon2"></span></p>
+                    <p style="align-content: flex-end;">ALTURA(cm): <span id="heightPokemon2"></span></p>
+                    <p style="align-content: flex-end;">PESO(kg): <span id="weightPokemon2"></span></p>
+                </p>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
     </div>

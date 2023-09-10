@@ -1,12 +1,18 @@
+var pokemonCollection = [];
+console.log(pokemonCollection);
 async function fetchPokemonData(apiUrl) {
     try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        // Atualize os elementos HTML com os dados obtidos
-        document.getElementById('name').textContent = data.name;
-        document.getElementById('id').textContent = data.id;
-        document.getElementById('height').textContent = data.height * 10;
-        document.getElementById('weight').textContent = data.weight / 10;
+        var pokemon = { name: "", id: "", height: 0, weight: 0, power: 0 };
+        var response = await fetch(apiUrl);
+        var data = await response.json();
+        pokemon.name = data.name;
+        pokemon.id = data.id;
+        pokemon.height = data.height;
+        pokemon.weight = data.weight;
+        pokemon.sprites= data.sprites;
+        pokemon.power = data.height;
+        pokemonCollection.push(pokemon);
+        showCards(pokemonCollection.indexOf(pokemon));
     } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
     }
@@ -14,6 +20,91 @@ async function fetchPokemonData(apiUrl) {
 
 function getPokemonByName(pokemonName) {
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/' + pokemonName;
-    console.log(apiUrl);
     return fetchPokemonData(apiUrl);
+}
+
+$( document ).ready(function() {
+    $("#cartaPokemon1").hide();
+    $("#cartaPokemonResultado").hide();
+    $("#cartaPokemon2").hide();
+    $("#fightResult").hide();
+});
+
+function showCards(typeCard){
+    let pokemon1 = pokemonCollection[0];
+    let pokemon2 = pokemonCollection[1];
+    switch (typeCard){
+        case 0:
+            document.getElementById('imgPokemon1').src= pokemon1.sprites.front_default;
+            document.getElementById('namePokemon1').textContent = pokemon1.name;
+            document.getElementById('idPokemon1').textContent = pokemon1.id;
+            document.getElementById('heightPokemon1').textContent = pokemon1.height * 10;
+            document.getElementById('weightPokemon1').textContent = pokemon1.weight / 10;
+            $("#cartaPokemon1").show();
+            break;
+        case 1:
+            document.getElementById('imgPokemon2').src= pokemon2.sprites.front_default;
+            document.getElementById('namePokemon2').textContent = pokemon2.name;
+            document.getElementById('idPokemon2').textContent = pokemon2.id;
+            document.getElementById('heightPokemon2').textContent = pokemon2.height * 10;
+            document.getElementById('weightPokemon2').textContent = pokemon2.weight / 10;
+            $("#cartaPokemon2").show();
+            break;
+        default:
+            break;
+    }
+    return;
+}
+
+function compareStats() {
+    let pokemon1 = pokemonCollection[0];
+    let pokemon2 = pokemonCollection[1];
+
+    //comparando altura
+    if (pokemon1.height - pokemon2.height < 0){
+        document.getElementById("result").textContent = pokemon2.name+ " é maior que " + pokemon1.name;
+        console.log(pokemon2.name + " é maior que " + pokemon1.name);  
+    } else if (pokemon1.height - pokemon2.height > 0){
+        document.getElementById("result").textContent = pokemon1.name + " é maior que " + pokemon2.name;
+        console.log(pokemon1.name + " é maior que " + pokemon2.name);
+    } else {
+        document.getElementById("result").textContent = pokemon1.name + " tem a mesma altura que " + pokemon2.name;
+        console.log(pokemon1.name + " tem a mesma altura que " + pokemon2.name);
+    }
+
+    document.getElementById("result").textContent += "\n";
+
+    //comparando peso
+    if (pokemon1.weight < pokemon2.weight){
+        document.getElementById("result").textContent += pokemon2.name + " é mais pesado que " + pokemon1.name;
+        console.log(pokemon2.name + " é mais pesado que " + pokemon1.name);  
+    } else if (pokemon1.weight > pokemon2.weight > 0){
+        document.getElementById("result").textContent += pokemon1.name + " é mais pesado que " + pokemon2.name;
+        console.log(pokemon1.name + " é mais pesado que " + pokemon2.name);
+    } else {
+        document.getElementById("result").textContent += pokemon1.name + " tem o mesmo peso que " + pokemon2.name;
+        console.log(pokemon1.name + " tem o mesmo peso que " + pokemon2.name);
+    }
+
+    $("#cartaPokemonResultado").show();
+    return;
+}
+
+function fight() {
+    let pokemon1 = pokemonCollection[0];
+    let pokemon2 = pokemonCollection[1];
+
+    // comparando poder
+    if (pokemon1.power < pokemon2.power){
+        document.getElementById("result").innerText = pokemon2.name + " GANHOU!!!";
+        console.log(pokemon2.name + " GANHOU!!!");  
+    } else if (pokemon1.power > pokemon2.power){
+        document.getElementById("result").innerText = pokemon2.name + " GANHOU!!!";
+        console.log(pokemon1.name + " GANHOU!!!");
+    } else {
+        document.getElementById("result").innerText = "EMPATE!";
+        console.log("EMPATE!");
+    }
+    $("#cartaPokemonResultado").show();
+    return;
 }
