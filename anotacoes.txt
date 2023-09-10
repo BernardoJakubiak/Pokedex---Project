@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokédex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+
+    <div class="container text-center" style="padding-left: 0%;">
+        <div class="row row-cols-3">
+          <div class="col">
+            <div class="card border-secondary mb-3" style="width: 200px;">
+            <img src="pokemon.jpeg" class="card-img-top" alt="menuPokemon">
+            <div class="accordion" id="accordionExample">
+                <br>
+                <h5 class="card-title">Escolha seu pokemon</h5>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            NORMAL
+                        </button>
+                    </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Normal</p>
+                                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                    <button type="button" class="btn btn-primary" href="">Lechonk</button>
+                                    <button type="button" class="btn btn-primary">Cyclizar</button>
+                                    <button type="button" class="btn btn-primary">Pidgey</button>
+                                    <button type="button" class="btn btn-primary">Farfetch'd</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            FOGO
+                        </button>
+                    </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Fogo</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ÁGUA
+                        </button>
+                    </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Água</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            GRAMA
+                        </button>
+                    </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Grama</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            VOADOR
+                        </button>
+                    </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Voador</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            LUTADOR
+                        </button>
+                    </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Lutador</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            VENENO
+                        </button>
+                    </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Veneno</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            ELÉTRICO
+                        </button>
+                    </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Elétrico</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            TERRA
+                        </button>
+                    </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Terra</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            PEDRA
+                        </button>
+                    </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Pedra</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            PSCÍQUICO
+                        </button>
+                    </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Pscíquico</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                            GELO
+                        </button>
+                    </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Gelo</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                            INSETO
+                        </button>
+                    </h2>
+                        <div id="collapseThirteen" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Inseto</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                            FANTASMA
+                        </button>
+                    </h2>
+                        <div id="collapseFourteen" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Fantasma</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                            FERRO
+                        </button>
+                    </h2>
+                        <div id="collapseFifteen" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Ferro</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                            DRAGÃO
+                        </button>
+                    </h2>
+                        <div id="collapseSixteen" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Tipo Dragão</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                            SOMBRIO
+                        </button>
+                    </h2>
+                    <div id="collapseSeventeen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Tipo Sombrio
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                            FADA
+                        </button>
+                    </h2>
+                    <div id="collapseEighteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Tipo Fada
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="#" class="btn btn-primary">Selecionar</a>
+                <p></p>
+                
+            </div>
+        </div>
+          </div>
+          <div class="col">
+            Column
+          </div>
+          <div class="col">
+            Column
+          </div>
+        </div>
+    </div>
+    
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- Inclua os arquivos JavaScript do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-EKb0L2OJN5YrK5l/K6HIq5yfub9BsA7P/D/u5z5eRsE0k5KjcSHbS1T7xXv2Ks0p1" crossorigin="anonymous">
+
+    
+    // URL da API para o Pokémon Ditto
+    const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+
+    // Função para fazer a solicitação à API e atualizar a página
+    async function fetchPokemonData() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            // Atualize os elementos HTML com os dados obtidos
+            document.getElementById('nome').textContent = data.name;
+            document.getElementById('id').textContent = data.id;
+            document.getElementById('altura').textContent = data.height;
+            document.getElementById('peso').textContent = data.weight;
+            // Adicione outros campos conforme necessário
+        } catch (error) {
+            console.error('Erro ao buscar dados da API:', error);
+        }
+    }
+
+    // Chame a função para buscar e exibir os dados do Pokémon Ditto
+    fetchPokemonData();
+</script>
+
+</body>
+
+</html>
