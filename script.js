@@ -1,9 +1,36 @@
+const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 var pokemonCollection = [];
 console.log(pokemonCollection);
-async function fetchPokemonData(apiUrl) {
+
+var pokemonObjectList = require('./pokemons.js');
+
+const axios = require('axios');
+
+for (let i = 1; i <= pokemonObjectList.length; i++) {
+    let pokemonUrl = apiUrl + pokemonObjectList[i];
+
+    axios.get(pokemonUrl)
+  .then(response => {
+    // Manipule os dados da resposta (response.data)
+    console.log('Dados da resposta:\n', response.data);
+    let pokemonData = response.data;
+    let pokemonType = document.getElementById();
+    const pokemonDiv = document.createElement('div');
+    pokemonDiv.innerHTML = `${pokemonData.name}`;
+
+    // Adicione o elemento ao DOM
+    document.body.appendChild(pokemonDiv);
+  })
+  .catch(error => {
+    // Manipule erros da requisição
+    console.error('Erro na requisição:', error);
+  });
+}
+
+async function fetchPokemonData(pokemonUrl) {
     try {
         var pokemon = { name: "", id: "", height: 0, weight: 0, power: 0 };
-        var response = await fetch(apiUrl);
+        var response = await fetch(pokemonUrl);
         var data = await response.json();
         pokemon.name = data.name;
         pokemon.id = data.id;
@@ -19,8 +46,8 @@ async function fetchPokemonData(apiUrl) {
 }
 
 function getPokemonByName(pokemonName) {
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/' + pokemonName;
-    return fetchPokemonData(apiUrl);
+    let pokemonUrl = apiUrl + pokemonName;
+    return fetchPokemonData(pokemonUrl);
 }
 
 $( document ).ready(function() {

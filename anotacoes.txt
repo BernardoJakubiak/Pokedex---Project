@@ -1,4 +1,11 @@
-                    <p style="align-content: flex-end;">Nome: <span class="card-title" id="name"></span></p>
-                    <p style="align-content: flex-end;">ID: <span id="id"></span></p>
-                    <p style="align-content: flex-end;">ALTURA(cm): <span id="height"></span></p>
-                    <p style="align-content: flex-end;">PESO(kg): <span id="weight"></span></p>
+<body>
+        <table width=400px border="1" cellpadding=0 cellspacing=0 align=center>
+            <script language="JavaScript">
+                for(i=0; i<5; i++) {
+                    document.write("<tr>")
+                    for(j=0; j<8; j++) {
+                        document.write(`<td width=50 onclick='shipOnClick(${i}, ${j})'><img id='ship${i}${j}' src='images/back.jpg'></td>`)
+                    }
+                    document.write("</tr>")
+                }
+            </script>
